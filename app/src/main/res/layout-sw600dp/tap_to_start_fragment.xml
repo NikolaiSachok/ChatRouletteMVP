@@ -1,0 +1,310 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootClick"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_weight="1">
+
+    <io.fotoapparat.view.CameraView
+        android:id="@+id/cameraView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible">
+
+        <!--Optionally add tap to focus-->
+        <io.fotoapparat.view.FocusView
+            android:id="@+id/focusView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </io.fotoapparat.view.CameraView>
+
+    <ImageView
+        android:id="@+id/bg_photo"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </ImageView>
+
+    <FrameLayout
+        android:id="@+id/frameSingleAll"
+        android:layout_width="130dp"
+        android:layout_height="160dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+         <androidx.cardview.widget.CardView
+            android:id="@+id/two"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_gravity="center|top"
+            android:layout_marginTop="@dimen/margin_start_end_18"
+            android:visibility="invisible"
+            app:cardBackgroundColor="@color/colorBlurViewOld"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="0dp"
+            tools:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/ic_singleGenderImage"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_all_genders"
+                    android:visibility="visible"
+                    android:layout_gravity="center|start"
+                    android:layout_marginStart="19dp"
+                    android:layout_marginEnd="@dimen/margin_xsmall"
+                    tools:visibility="visible">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/singleText"
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:gravity="center"
+                    android:text="All"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:textColor="@color/white"
+                    android:textSize="18sp">
+
+                </TextView>
+
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvMale"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_gravity="center|top"
+            android:layout_marginTop="@dimen/margin_start_end_18"
+            android:visibility="gone"
+            app:cardBackgroundColor="@color/colorBlurViewOld"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="0dp"
+            tools:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/ic_singleGenderImage_male"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_male_single"
+                    android:visibility="visible"
+                    android:layout_gravity="center|start"
+                    android:layout_marginStart="19dp"
+                    android:layout_marginEnd="@dimen/margin_xsmall"
+                    tools:visibility="visible">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/singleTextMale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="Male"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:textColor="@color/white"
+                    android:textSize="18sp">
+
+                </TextView>
+
+
+
+        </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cvFemale"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
+            android:layout_gravity="center|top"
+            android:layout_marginTop="@dimen/margin_start_end_18"
+            android:visibility="gone"
+            app:cardBackgroundColor="@color/colorBlurViewOld"
+            app:cardCornerRadius="30dp"
+            app:cardElevation="0dp"
+            tools:visibility="visible">
+
+                <ImageView
+                    android:id="@+id/ic_singleGenderImage_female"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_female_single"
+                    android:visibility="visible"
+                    android:layout_gravity="center|start"
+                    android:layout_marginStart="19dp"
+                    android:layout_marginEnd="@dimen/margin_xsmall"
+                    tools:visibility="visible">
+
+                </ImageView>
+
+                <TextView
+                    android:id="@+id/singleTextFeMale"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="1"
+                    android:text="Female"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/margin_small"
+                    android:textColor="@color/white"
+                    android:textSize="18sp">
+
+                </TextView>
+
+
+
+        </androidx.cardview.widget.CardView>
+
+
+<!--    <ImageView-->
+<!--        android:id="@+id/two"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:padding="@dimen/margin_default"-->
+<!--        android:src="@drawable/ic_all_gender"-->
+<!--        android:visibility="invisible"-->
+<!--        android:layout_marginBottom="@dimen/margin_default"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        tools:visibility="visible">-->
+
+<!--    </ImageView>-->
+
+
+
+
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/containers"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+    <ImageView
+        android:id="@+id/female"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:src="@drawable/ic_female"
+        android:layout_gravity="center|start"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="@+id/all_gender"
+        app:layout_constraintEnd_toStartOf="@+id/all_gender"
+        app:layout_constraintTop_toTopOf="@+id/all_gender">
+
+    </ImageView>
+
+    <ImageView
+        android:id="@+id/all_gender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_all"
+        android:layout_gravity="center"
+
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+    </ImageView>
+
+    <ImageView
+        android:id="@+id/male"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:src="@drawable/ic_male"
+        android:visibility="invisible"
+        android:layout_gravity="center|end"
+        app:layout_constraintBottom_toBottomOf="@+id/all_gender"
+        app:layout_constraintStart_toEndOf="@+id/all_gender"
+        app:layout_constraintTop_toTopOf="@+id/all_gender">
+
+    </ImageView>
+    </FrameLayout>
+
+    <ImageView
+        android:id="@+id/tap"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="70dp"
+        android:layout_marginTop="150dp"
+        android:visibility="invisible"
+        android:src="@drawable/ic_tap_to_start"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </ImageView>
+
+    <TextView
+        android:id="@+id/tvTapToStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tap to START"
+        android:textColor="@color/white"
+        android:textSize="26dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tap"
+        app:layout_constraintStart_toStartOf="@+id/tap"
+        app:layout_constraintTop_toTopOf="@+id/tap">
+
+    </TextView>
+
+    <ImageView
+        android:id="@+id/ivHand"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_hand"
+        android:visibility="invisible"
+        android:layout_marginTop="60dp"
+        android:layout_marginStart="65dp"
+        app:layout_constraintBottom_toBottomOf="@+id/tap"
+        app:layout_constraintEnd_toEndOf="@+id/tap"
+        app:layout_constraintStart_toStartOf="@+id/tap"
+        app:layout_constraintTop_toTopOf="@+id/tap">
+
+    </ImageView>
+
+    <FrameLayout
+        android:id="@+id/clickAction"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+    <FrameLayout
+        android:id="@+id/child_main_fragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </FrameLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

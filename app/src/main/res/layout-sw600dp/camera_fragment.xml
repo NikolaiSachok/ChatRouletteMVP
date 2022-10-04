@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <io.fotoapparat.view.CameraView
+        android:id="@+id/cameraView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:visibility="visible">
+
+        <!--Optionally add tap to focus-->
+        <io.fotoapparat.view.FocusView
+            android:id="@+id/focusView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </io.fotoapparat.view.CameraView>
+
+    <TextView
+        android:id="@+id/no_permission"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal|bottom"
+        android:text="No Camera permission granted."
+        android:textSize="20sp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toTopOf="@+id/capture"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="HardcodedText"
+        tools:visibility="gone" />
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardView2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/margin_default_large"
+        android:layout_marginEnd="@dimen/margin_default_large"
+        android:layout_marginTop="@dimen/margin_default_large"
+        android:layout_marginBottom="200dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="0dp"
+        android:visibility="gone"
+        app:layout_constraintHorizontal_weight="20"
+        app:layout_constraintVertical_weight="40"
+        app:cardElevation="1dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:id="@+id/result"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_margin="5dp"
+            android:background="@color/white"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_preview_holder" />
+
+    </androidx.cardview.widget.CardView>
+    <ImageView
+        android:id="@+id/capture"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
+        android:layout_margin="45dp"
+        android:src="@drawable/ic_button_selfie"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+    </ImageView>
+
+    <View
+        android:id="@+id/view"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cameraView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cardView2">
+
+    </View>
+
+    <TextView
+        android:id="@+id/update"
+        android:layout_width="0dp"
+        android:layout_height="65dp"
+        android:background="@drawable/background_btn_gray_correct"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:layout_marginStart="10dp"
+        android:visibility="gone"
+        android:paddingStart="@dimen/margin_small"
+        android:paddingEnd="@dimen/margin_small"
+        android:text="Update"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/view"
+        app:layout_constraintEnd_toStartOf="@+id/view"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view" />
+
+
+    <TextView
+        android:id="@+id/next"
+        android:layout_width="0dp"
+        android:layout_height="65dp"
+        android:background="@drawable/background_btn_gray"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:visibility="gone"
+        android:paddingStart="@dimen/margin_small"
+        android:paddingEnd="@dimen/margin_small"
+        android:text="Next"
+        android:layout_marginEnd="10dp"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/update"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/view"
+        app:layout_constraintTop_toTopOf="@+id/update" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

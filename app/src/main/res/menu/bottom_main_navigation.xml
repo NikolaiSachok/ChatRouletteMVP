@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/main_page_action"
+        android:icon="@drawable/ic_main_selector"
+        android:title="@string/events" />
+    <item
+        android:id="@+id/property_action"
+        android:icon="@drawable/ic_property_selector"
+        android:title="@string/property" />
+    <item
+        android:id="@+id/listings_action"
+        android:icon="@drawable/ic_listings_selector"
+        android:title="@string/listings"/>
+    <item
+        android:id="@+id/smart_devices_action"
+        android:icon="@drawable/ic_smart_devisec_selector"
+        android:title="@string/smart_devices" />
+
+
+</menu>

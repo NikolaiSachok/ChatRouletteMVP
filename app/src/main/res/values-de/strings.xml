@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sign_up">Anmelden</string>
+    <string name="don_t_have_an_account">Sie haben kein Konto?</string>
+    <string name="login_with_google">Melden Sie sich mit Google an</string>
+    <string name="or">oder</string>
+    <string name="repeat_password">Passwort wiederholen</string>
+    <string name="password">Passwort</string>
+    <string name="e_mail_address">E-Mail addresse</string>
+    <string name="phone_number">Telefonnummer</string>
+    <string name="last_name">Nachname</string>
+    <string name="name">Name</string>
+    <string name="login">Anmeldung</string>
+    <string name="de">DE</string>
+    <string name="en">EN</string>
+    <string name="email_address">E-Mail addresse</string>
+
+    <string name="i_forgot_pass_txt">Passwort vergessen?</string>
+    <string name="registration">Anmeldung</string>
+    <string name="main">Main</string>
+    <string name="we_have_sent_you_an_email">Wir haben Ihnen zur Bestätigung eine E-Mail \nan Ihre Adresse gesendet.
+         \nBitte folgen Sie dem Link in der E-Mail</string>
+    <string name="events">Events</string>
+    <string name="property">Eigentum</string>
+    <string name="listings">Auflistungen</string>
+    <string name="smart_devices">Intelligente Geräte</string>
+    <string name="today_events">Today events</string>
+    <string name="tomorrow_events">Tomorrow events</string>
+    <string name="not">No</string>
+    <string name="female">Female</string>
+    <string name="all"> All  </string>
+    <string name="male">Male </string>
+
+</resources>

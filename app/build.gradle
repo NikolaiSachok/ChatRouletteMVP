@@ -1,0 +1,142 @@
+plugins {
+    id 'com.android.application'
+    id 'kotlin-android'
+    id 'kotlin-kapt'
+    id 'androidx.navigation.safeargs.kotlin'
+    id 'dagger.hilt.android.plugin'
+    id 'kotlin-parcelize'
+    id 'com.google.firebase.crashlytics'
+    id 'com.google.gms.google-services'
+    id 'com.onesignal.androidsdk.onesignal-gradle-plugin'
+}
+
+android {
+    signingConfigs {
+        debug {
+            keyAlias 'jkjsjfjjjjf'
+            storePassword 'fjsokfejjddoo7878d'
+            keyPassword 'fjsokfejjddoo7878d'
+            storeFile file('C:\\Users\\38093\\AndroidStudioProjects\\ChatRulleteDemo\\app\\releaseconfig.jks')
+        }
+        release {
+            storeFile file('C:\\Users\\38093\\AndroidStudioProjects\\ChatRulleteDemo\\app\\releaseconfig.jks')
+            storePassword 'fjsokfejjddoo7878d'
+            keyPassword 'fjsokfejjddoo7878d'
+            keyAlias 'jkjsjfjjjjf'
+        }
+    }
+    compileSdk 31
+
+    defaultConfig {
+        applicationId "com.video.chat.v.love.chatroulette"
+        minSdk 23
+        targetSdk 31
+        versionCode 18
+        versionName "0.26"
+        renderscriptTargetApi 23
+        renderscriptSupportModeEnabled true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        signingConfig signingConfigs.release
+    }
+
+    buildTypes {
+        release {
+            debuggable false
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            buildConfigField "String", "BASE_URL", '"https://chatrlt.xyz/"'
+        }
+        debug {
+            minifyEnabled false
+            buildConfigField "String", "BASE_URL", '"https://chatrlt.xyz/"'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_11
+        targetCompatibility JavaVersion.VERSION_11
+    }
+    buildFeatures {
+        viewBinding true
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+dependencies {
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:1.5.30"
+
+    implementation 'androidx.core:core-ktx:1.7.0'
+    implementation 'androidx.appcompat:appcompat:1.4.1'
+    implementation 'com.google.android.material:material:1.5.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
+    testImplementation 'junit:junit:4.+'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    //OkHttp
+    implementation 'com.squareup.okhttp3:okhttp:4.9.0'
+    implementation 'com.squareup.okhttp3:logging-interceptor:4.8.1'
+
+    //Retrofit
+    api 'com.squareup.retrofit2:retrofit:2.9.0'
+    api 'com.squareup.retrofit2:converter-gson:2.9.0'
+
+    //Lifecycle
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.3.1")
+    implementation("androidx.lifecycle:lifecycle-extensions:2.2.0")
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.3.1")
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.3.1")
+    implementation 'android.arch.lifecycle:extensions:1.1.1'
+
+    //Navigation
+    implementation 'androidx.navigation:navigation-fragment-ktx:2.3.4'
+    implementation 'androidx.navigation:navigation-ui-ktx:2.3.4'
+    implementation "androidx.fragment:fragment-ktx:1.3.6"
+    implementation "androidx.navigation:navigation-dynamic-features-fragment:2.3.4"
+
+    //dagger
+    implementation 'com.google.dagger:hilt-android:2.38.1'
+    kapt 'com.google.dagger:hilt-android-compiler:2.38.1'
+    kapt 'androidx.hilt:hilt-compiler:1.0.0'
+    implementation 'androidx.work:work-runtime:2.8.0-alpha02'
+
+    //debug panel
+    debugImplementation "com.github.chuckerteam.chucker:library:3.5.2"
+    releaseImplementation "com.github.chuckerteam.chucker:library-no-op:3.5.2"
+
+    
+    implementation 'io.fotoapparat:fotoapparat:2.7.0'
+    implementation 'jp.wasabeef:blurry:4.0.1'
+    //Blur library
+    implementation 'com.eightbitlab:blurview:1.4.0'
+    implementation 'com.github.mmin18:realtimeblurview:1.2.1'
+
+    implementation "com.google.android.exoplayer:exoplayer:2.18.0"
+
+    // Import the BoM for the Firebase platform
+    implementation platform('com.google.firebase:firebase-bom:30.4.1')
+
+    // Add the dependencies for the Crashlytics and Analytics libraries
+    // When using the BoM, you don't specify versions in Firebase library dependencies
+    implementation 'com.google.firebase:firebase-crashlytics-ktx'
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+    implementation('com.google.firebase:firebase-auth-ktx') {
+        exclude module: "play-services-safetynet"
+    }
+
+    //Glide
+    implementation "com.github.bumptech.glide:glide:4.13.2"
+    kapt "com.github.bumptech.glide:compiler:4.13.2"
+
+    implementation 'com.onesignal:OneSignal:[4.0.0, 4.99.99]'
+
+    implementation 'com.android.billingclient:billing-ktx:5.0.0'
+    implementation 'com.google.guava:guava:24.1-jre'
+    implementation 'com.google.guava:guava:27.0.1-android'
+    implementation 'com.squareup.picasso:picasso:2.8'
+
+    implementation 'com.appsflyer:af-android-sdk:6.9.0'
+    implementation "com.android.installreferrer:installreferrer:2.2"
+    implementation "com.miui.referrer:homereferrer:1.0.0.6"
+}

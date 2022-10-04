@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+
+    <com.google.android.exoplayer2.ui.PlayerView
+        android:id="@+id/videoPlayer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="visible"
+        app:default_artwork="@drawable/ic_preview_holder"
+        app:resize_mode="zoom"
+        android:layout_marginStart="-15dp"
+        android:layout_marginEnd="-15dp"
+        android:layout_marginBottom="-15dp"
+        android:layout_marginTop="-15dp"
+        app:shutter_background_color="@android:color/transparent"
+        app:show_buffering="when_playing"
+        app:use_controller="false" />
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/endCall"
+        android:layout_width="0dp"
+        android:layout_height="55dp"
+        android:background="@drawable/background_btn_light_gray_65"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:paddingStart="@dimen/margin_small"
+        android:paddingEnd="@dimen/margin_small"
+        android:text="Skip"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="28sp"
+        android:textStyle="bold"
+        android:layout_margin="55dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/margin_default_large"
+        app:cardCornerRadius="90dp"
+        app:cardElevation="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/endCall"
+
+        app:layout_constraintStart_toStartOf="parent">
+
+
+        <io.fotoapparat.view.CameraView
+            android:id="@+id/cameraView"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:visibility="visible"
+            app:circularflow_defaultRadius="90dp"
+            app:circularflow_radiusInDP="90"
+            app:layout_constraintCircleRadius="90dp"
+
+            tools:visibility="visible">
+
+            <!--Optionally add tap to focus-->
+            <io.fotoapparat.view.FocusView
+                android:id="@+id/focusView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </io.fotoapparat.view.CameraView>
+    </androidx.cardview.widget.CardView>
+
+    <ImageView
+        android:id="@+id/ic_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/margin_xsmall"
+        android:src="@drawable/ic_close_white"
+        android:visibility="visible"
+        android:layout_margin="@dimen/margin_default"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </ImageView>
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/margin_default">
+
+
+    <ImageView
+        android:id="@+id/textView3"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="@dimen/margin_default_large"
+        android:layout_marginTop="@dimen/margin_default_large"
+        android:gravity="center"
+        android:src="@drawable/ic_swipes_bell"
+        android:textColor="#34313D"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+    </ImageView>
+
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/margin_default_large"
+        android:text="You are out of swipes!"
+        android:textColor="#34313D"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="@+id/textView3"
+        app:layout_constraintStart_toStartOf="@+id/textView3"
+        app:layout_constraintTop_toBottomOf="@+id/textView3">
+
+    </TextView>
+
+
+    <TextView
+        android:id="@+id/openShop"
+        android:layout_width="match_parent"
+        android:layout_height="65dp"
+        android:layout_marginStart="85dp"
+        android:layout_marginTop="@dimen/margin_small"
+        android:layout_marginEnd="85dp"
+        android:background="@drawable/background_btn_gray"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:text="Get more swipes"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+    <TextView
+        android:id="@+id/back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Back"
+        android:layout_marginTop="@dimen/margin_small"
+        android:textColor="@color/black"
+        android:textSize="28sp"
+        app:layout_constraintEnd_toEndOf="@+id/openShop"
+        app:layout_constraintStart_toStartOf="@+id/openShop"
+        app:layout_constraintTop_toBottomOf="@+id/openShop">
+
+    </TextView>
+</androidx.constraintlayout.widget.ConstraintLayout>

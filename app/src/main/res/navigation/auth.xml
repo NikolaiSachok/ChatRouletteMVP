@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/auth"
+    app:startDestination="@id/loginFragment">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.video.chat.v.love.chatroulette.presentation.auth.login.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/login_fragment">
+
+        <action
+            android:id="@+id/action_getLoginFragment_to_tapToStartFragment"
+            app:destination="@id/tapToStartFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/tapToStartFragment"
+        android:name="com.video.chat.v.love.chatroulette.presentation.start.TapToStartFragment"
+        android:label="tapTostartFragment"
+        tools:layout="@layout/tap_to_start_fragment">
+
+        <action
+            android:id="@+id/action_tapToStartFragment_to_SearchFragment"
+            app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/action_tapToStartFragment_to_GenderFragment"
+            app:destination="@id/genderFragment" />
+
+        <action
+            android:id="@+id/action_tapToStartFragment_to_ShopFragment"
+            app:destination="@id/shopFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/genderFragment"
+        android:name="com.video.chat.v.love.chatroulette.presentation.start.GenderFragment"
+        android:label="genderFragment"
+        tools:layout="@layout/gender_fragment">
+        <action
+            android:id="@+id/action_tapToStartFragment_to_SearchFragment"
+            app:destination="@id/searchFragment" />
+
+        <action
+            android:id="@+id/action_tapToStartFragment_to_ShopFragment"
+            app:destination="@id/shopFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/shopFragment"
+        android:name="com.video.chat.v.love.chatroulette.presentation.start.ShopFragment"
+        android:label="shopfragment"
+        tools:layout="@layout/shop_fragment">
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.video.chat.v.love.chatroulette.presentation.search.SearchFragment"
+        android:label="searchFragment"
+        tools:layout="@layout/search_fragment">
+
+        <action
+            android:id="@+id/action_searchFragment_to_matchFragment"
+            app:destination="@id/matchFragment">
+
+
+        </action>
+
+        <action
+            android:id="@+id/action_searchFragment_to_ShopFragment"
+            app:destination="@id/shopFragment" />
+    </fragment>
+
+    <action
+        android:id="@+id/action_tapToStartFragment_to_ShopFragment"
+        app:destination="@id/shopFragment" />
+
+
+    <fragment
+        android:id="@+id/matchFragment"
+        android:name="com.video.chat.v.love.chatroulette.presentation.match.MatchFragment"
+        android:label="matchFragment"
+        tools:layout="@layout/match_fragment">
+
+        <!--        <argument-->
+        <!--            android:name="videosList"-->
+        <!--            app:argType="com.video.chat.v.love.chatroulette.network.data.videos.UserVideosData"-->
+        <!--            app:nullable="true" />-->
+
+        <action
+            android:id="@+id/action_matchFragment_to_communicationFragment"
+            app:destination="@id/communicationFragment">
+
+        </action>
+
+        <action
+            android:id="@+id/action_tapToStartFragment_to_ShopFragment"
+            app:destination="@id/shopFragment" />
+
+
+    </fragment>
+    <action
+        android:id="@+id/action_matchFragment_to_communicationFragment"
+        app:destination="@id/communicationFragment">
+
+    </action>
+    <fragment
+        android:id="@+id/communicationFragment"
+        android:name="com.video.chat.v.love.chatroulette.presentation.match.CommunicationFragment"
+        android:label="communicationFragment"
+        tools:layout="@layout/communication_fragment">
+
+        <action
+            android:id="@+id/action_communicationFragment_to_search"
+            app:destination="@id/searchFragment" />
+
+        <action
+            android:id="@+id/action_communicationFragment_to_main"
+            app:destination="@id/tapToStartFragment" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/selfieFragment"
+        android:name="com.video.chat.v.love.chatroulette.presentation.makeselfie.MakeSelfieFragment"
+        android:label="selfieFragment"
+        tools:layout="@layout/makeselfie_fragment">
+
+        <action
+            android:id="@+id/action_selfieFragment_to_cameraFragment"
+            app:destination="@id/cameraFragment" />
+    </fragment>
+    <action
+        android:id="@+id/action_selfieFragment_to_cameraFragment"
+        app:destination="@id/cameraFragment" />
+    <fragment
+        android:id="@+id/cameraFragment"
+        android:name="com.video.chat.v.love.chatroulette.presentation.makeselfie.CameraFragment"
+        android:label="cameraFragment"
+        tools:layout="@layout/camera_fragment">
+
+        <action
+            android:id="@+id/action_cameraFragment_to_tapToStartFragment"
+            app:destination="@id/tapToStartFragment" />
+
+
+    </fragment>
+
+
+    <action
+        android:id="@+id/action_matchFragment_to_tapToStartFragment"
+        app:destination="@id/tapToStartFragment" />
+</navigation>

@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1009212366248",
+    "project_id": "video-49c6e",
+    "storage_bucket": "video-49c6e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1009212366248:android:c3c8402f6f8c24ea76919d",
+        "android_client_info": {
+          "package_name": "com.video.chat.v.love.chatroulette"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1009212366248-q41jn5jo0k7ne4omv7o7jm60kbrl5kic.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.video.chat.v.love.chatroulette",
+            "certificate_hash": "f9834de438b1358be5d036a7371379adeb648ffd"
+          }
+        },
+        {
+          "client_id": "1009212366248-pns3ji4s18c05vtehpl30r3igsebgioh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCsyT2Bwff_AunQ1n9_vZQ_OZgBMg3x5n8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1009212366248-pns3ji4s18c05vtehpl30r3igsebgioh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

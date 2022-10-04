@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="btn_corner_radius">15dp</dimen>
+    <dimen name="default_et_height">50dp</dimen>
+    <dimen name="text_size_14">14sp</dimen>
+    <dimen name="text_size_13">13sp</dimen>
+    <dimen name="toolbar_size">60dp</dimen>
+
+
+    <dimen name="margin_default">20dp</dimen>
+    <dimen name="margin_default_large">35dp</dimen>
+    <dimen name="margin_default_xlarge">45dp</dimen>
+    <dimen name="margin_start_end">16dp</dimen>
+    <dimen name="margin_start_end_18">18dp</dimen>
+
+    <dimen name="margin_small">16dp</dimen>
+    <dimen name="margin_xsmall">6dp</dimen>
+    <dimen name="margin_xxsmall">3dp</dimen>
+
+    <dimen name="margin_xxlarge">8dp</dimen>
+
+
+    <!-- Application font sizes -->
+    <dimen name="text_size_body1">14sp</dimen>
+    <!--endregion-->
+
+
+</resources>
